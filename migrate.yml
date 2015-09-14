@@ -1,0 +1,10 @@
+---
+- hosts: droplets
+  sudo: yes
+
+  tasks:
+
+  - name: Run artisan migrate
+    shell: php /var/www/laravel/artisan migrate --force
+    sudo: yes
+    sudo_user: www-data
